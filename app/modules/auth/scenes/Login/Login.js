@@ -1,6 +1,6 @@
 import React from 'react';
 import KeyboardSpacer from 'react-native-keyboard-spacer';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Image, Alert } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
@@ -64,7 +64,7 @@ class Login extends React.Component {
 
     onSuccess({ exists, user}) {
         if (exists) Actions.Main()
-        else Actions.CompleteProfile({ user })
+        else Actions.CompleteProfile({ user });
     }
 
     onError(error) {

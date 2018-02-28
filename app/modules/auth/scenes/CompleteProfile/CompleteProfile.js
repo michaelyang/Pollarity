@@ -1,8 +1,8 @@
 import React from 'react';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-
-import { actions as auth } from "../../index"
+import { Alert } from 'react-native';
+import { actions as auth } from "../../index";
 const { createUser } = auth;
 
 import Form from "../../components/Form"
@@ -43,7 +43,6 @@ class CompleteProfile extends React.Component {
         //attach user id
         const { user } = this.props;
         data['uid'] = user.uid;
-
         this.props.createUser(data, this.onSuccess, this.onError)
     }
 
