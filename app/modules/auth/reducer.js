@@ -5,6 +5,7 @@ import * as t from './actionTypes';
 let initialState = { isLoggedIn: false, user: null };
 
 const authReducer = (state = initialState, action) => {
+    let newstate;
     switch (action.type) {
         case t.LOGGED_IN:
             const user = action.data;
@@ -14,17 +15,17 @@ const authReducer = (state = initialState, action) => {
                 ['user', JSON.stringify(user)]
             ]);
 
-            state = Object.assign({}, state, { isLoggedIn: true, user: user });
+            newstate = Object.assign({}, state, { isLoggedIn: true, user: user });
 
-            return state;
+            return newstate;
 
         case t.LOGGED_OUT:
             let keys = ['user'];
             AsyncStorage.multiRemove(keys);
 
-            state = Object.assign({}, state, {isLoggedIn: false, user: null });
+            newstate = Object.assign({}, state, {isLoggedIn: false, user: null });
 
-            return state;
+            return newstate;
 
         default:
             return state;
