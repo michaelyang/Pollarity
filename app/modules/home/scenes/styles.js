@@ -39,7 +39,9 @@ const styles = StyleSheet.create({
       lineHeight: fontSize.large + 7,
       fontFamily: fontFamily.bold,
       color:color.white,
-      letterSpacing: 1
+      letterSpacing: 1,
+      textAlign: 'center',
+      marginVertical: 10
   },
 
   subText:{
@@ -142,6 +144,22 @@ const styles = StyleSheet.create({
       fontFamily: fontFamily.medium,
       color: "#414141",
       paddingHorizontal: padding
+  },
+
+  questionContainer:{
+    backgroundColor: 'white',
+    borderColor: 'white',
+    borderRadius: 10,
+    borderWidth: 1,
+    marginHorizontal: 15,
+    height: '70%',
+  },
+
+  questionText: {
+    marginTop: 10,
+    fontSize: fontSize.large + 3,
+    fontFamily: fontFamily.bold,
+    textAlign: 'center'
   }
 });
 
