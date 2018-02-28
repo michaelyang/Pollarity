@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-import { View, Text } from 'react-native';
+import { View, Text, Alert } from 'react-native';
 import { Button } from 'react-native-elements'
 
 import { validate, isEmpty } from '../../utils/validate'
@@ -48,7 +48,6 @@ class Form extends React.Component {
                 retData[key] = value;
             }
         });
-
         return retData;
     }
 

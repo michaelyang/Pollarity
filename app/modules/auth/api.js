@@ -14,8 +14,12 @@ export function register(data, callback) {
 
 //Create the user object in realtime database
 export function createUser (user, callback) {
-    database.ref('users').child(user.uid).update({ ...data })
-        .then(() => callback(true, null, null))
+    console.log(user);
+    database.ref('users').child(user.uid).update(user)
+        .then(() => {
+          console.log('hit')
+          return callback(true, null, null)
+        })
         .catch((error) => callback(false, null, {message: error}));
 }
 

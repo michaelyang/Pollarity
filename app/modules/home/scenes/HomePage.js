@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Scene, Router, ActionConst, Stack, Modal, Tabs } from 'react-native-router-flux';
 import styles from './styles';
 
