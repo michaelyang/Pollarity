@@ -11,6 +11,9 @@ import CompleteProfile from '../modules/auth/scenes/CompleteProfile';
 import Login from '../modules/auth/scenes/Login';
 import ForgotPassword from '../modules/auth/scenes/ForgotPassword';
 
+//Hompage Scene
+import HomePage from '../modules/home/scenes/HomePage';
+
 //Import Store, actions
 import store from '../redux/store'
 import { checkLoginStatus } from "../modules/auth/actions";
