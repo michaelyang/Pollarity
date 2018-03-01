@@ -138,14 +138,6 @@ const styles = StyleSheet.create({
       right: 20
   },
 
-  orText:{
-      backgroundColor: 'white',
-      fontSize: fontSize.regular,
-      fontFamily: fontFamily.medium,
-      color: "#414141",
-      paddingHorizontal: padding
-  },
-
   questionContainer:{
     backgroundColor: 'white',
     borderColor: 'white',
@@ -160,6 +152,10 @@ const styles = StyleSheet.create({
     fontSize: fontSize.large + 3,
     fontFamily: fontFamily.bold,
     textAlign: 'center'
+  },
+
+  choice: {
+    backgroundColor: 'grey'
   }
 });
 

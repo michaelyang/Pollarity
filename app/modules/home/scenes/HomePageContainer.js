@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import HomePage from './HomePage';
+import * as Actions from '../actions.js';
 
 //question fetch placeholder
 const ques = {
