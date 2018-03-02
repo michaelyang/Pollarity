@@ -12,7 +12,7 @@ import Login from '../modules/auth/scenes/Login';
 import ForgotPassword from '../modules/auth/scenes/ForgotPassword';
 
 //Hompage Scene
-import HomePage from '../modules/home/scenes/HomePage';
+import HomePage from '../modules/home/scenes/HomePageContainer';
 
 //Import Store, actions
 import store from '../redux/store'
@@ -58,7 +58,7 @@ export default class extends React.Component {
                     </Stack>
 
                     <Stack key="Main" initial={this.state.isLoggedIn}>
-                        <Scene key="Home" component={HomePage} title="Home" initial={true} type={ActionConst.REPLACE}/>
+                        <Scene key="Home" component={HomePage} title="Home" initial={true} type={ActionConst.REPLACE} hideNavBar/>
                     </Stack>
                 </Scene>
             </Router>
